@@ -1,0 +1,104 @@
+*{
+    margin: 0;
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+
+:root{
+    --color-ligblue: #a8e6e0;
+    --color-darkblue:#08b8a6;
+    --color-black: #000;
+    --color-white: #fff;
+    --color-price: #133a13;
+    --color-point: #345c34;
+}
+
+html, body{
+    background-color: var(--color-ligblue);
+    color: var(--color-black);
+
+   /*for this project only*/
+    display: grid;
+    place-content: center;
+    margin: 1rem;
+}
+
+h1, p{
+    overflow-wrap: break-word;
+}
+
+.product-card{
+    background-color:var(--color-darkblue); 
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 640px;
+    display: grid;
+}
+
+.inner-card{
+    padding: 15px;
+    display: grid;
+    gap: 1rem;
+}
+
+.product-title{
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    font-family: 'Cormorant', serif;
+}
+
+.product-header{
+    font-family: 'Alfa Slab One', cursive;
+    color: var(--color-black);
+    font-size: 400;
+}
+
+.product-content{
+    font-family: 'Inconsolata', monospace;  
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+}
+
+.main-price{
+    text-decoration: none;
+    font-family: 'Alfa Slab One', cursive;
+    color: var(--color-price);
+    font-size: 4rem;
+}
+
+.old-price{
+    text-decoration: line-through;
+}
+
+button{
+    cursor: pointer;
+    text-decoration: none;
+    background-color: var(--color-price);
+    color: var(--color-white);
+    padding: 15px;
+    border: 0;
+    border-radius: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.75rem;
+    font-weight: bold;
+    font-size: px;
+}
+
+button:is(:hover, :focus) {
+    background-color:  var(--color-point);
+}
+
+@media (min-width: 640px){
+    .product-card{
+      grid-template-columns: 1fr;
+    }
+}
